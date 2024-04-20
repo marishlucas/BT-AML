@@ -10,6 +10,7 @@ import {
   UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
+import { Outlet } from 'react-router';
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -306,7 +307,9 @@ export default function Layout({ children }) {
         </div>
 
         <main className="py-10 lg:pl-72">
-          <div className="px-4 sm:px-6 lg:px-8">{children}</div>
+          <div className="px-4 sm:px-6 lg:px-8">
+            <Outlet />
+          </div>
         </main>
       </div>
     </>
