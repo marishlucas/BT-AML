@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 async function fetchData(page) {
   const response = await fetch(
@@ -21,7 +22,111 @@ export default function Transactions() {
   });
 
   if (isLoading) {
-    return <div className="text-xl text-center mt-32">Loading...</div>;
+    return (
+      <>
+        <div
+          role="status"
+          className="animate-pulse mt-16"
+        >
+          <div class="h-2.5 bg-gray-300 rounded-full max-w-[640px] mb-2.5 mx-4"></div>
+          <div class="mx-4 h-2.5 bg-gray-300 rounded-full max-w-[540px]"></div>
+          <div class="flex items-center justify-center mt-4"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div className="text-xl text-center mt-8">
+          <div
+            role="status"
+            class="mx-6 max-w-full p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse md:p-6 "
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <div>
+                <div class="h-2.5 bg-gray-300 rounded-full  w-24 mb-2.5"></div>
+                <div class="w-32 h-2 bg-gray-200 rounded-full "></div>
+              </div>
+              <div class="h-2.5 bg-gray-300 rounded-full  w-12"></div>
+            </div>
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </>
+    );
   }
 
   if (error instanceof Error) {
@@ -36,11 +141,11 @@ export default function Transactions() {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-gray-900">
-            Transactions
+            Tranzacții
           </h1>
           <p className="mt-2 text-sm text-gray-700">
-            A table of placeholder stock market data that does not make any
-            sense.
+            Un tabel care afiseaza toate tranzactiile din baza de date a
+            sistemului băncii.
           </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -48,7 +153,7 @@ export default function Transactions() {
             type="button"
             className="block rounded-md bg-blue-500 transition px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
           >
-            Export
+            Exportează
           </button>
         </div>
       </div>
@@ -139,66 +244,54 @@ export default function Transactions() {
                       {transaction.Receiving_Currency}
                     </td>
                     <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
-                      {transaction.Probability >= 0 &&
-                        transaction.Probability <= 0.4 && (
-                          <span className="inline-flex items-center gap-x-1.5 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">
-                            <svg
-                              className="h-1.5 w-1.5 fill-green-500"
-                              viewBox="0 0 6 6"
-                              aria-hidden="true"
-                            >
-                              <circle
-                                cx={3}
-                                cy={3}
-                                r={3}
-                              />
-                            </svg>
-                            {transaction.Probability * 100}%
-                          </span>
-                        )}
-                      {transaction.Probability > 0.4 &&
-                        transaction.Probability <= 0.6 && (
-                          <span className="inline-flex items-center gap-x-1.5 rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
-                            <svg
-                              className="h-1.5 w-1.5 fill-yellow-500"
-                              viewBox="0 0 6 6"
-                              aria-hidden="true"
-                            >
-                              <circle
-                                cx={3}
-                                cy={3}
-                                r={3}
-                              />
-                            </svg>
-                            {transaction.Probability * 100}%
-                          </span>
-                        )}
-                      {transaction.Probability > 0.6 &&
-                        transaction.Probability <= 1 && (
-                          <span className="inline-flex items-center gap-x-1.5 rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700">
-                            <svg
-                              className="h-1.5 w-1.5 fill-red-500"
-                              viewBox="0 0 6 6"
-                              aria-hidden="true"
-                            >
-                              <circle
-                                cx={3}
-                                cy={3}
-                                r={3}
-                              />
-                            </svg>
-                            {transaction.Probability * 100}%
-                          </span>
-                        )}
+                      {transaction.Is_Laundering ? (
+                        <span className="inline-flex items-center gap-x-1.5 rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700">
+                          <svg
+                            className="h-1.5 w-1.5 fill-red-500"
+                            viewBox="0 0 6 6"
+                            aria-hidden="true"
+                          >
+                            <circle
+                              cx={3}
+                              cy={3}
+                              r={3}
+                            />
+                          </svg>
+                          {(
+                            100 -
+                            Number(transaction.Probability) * 100
+                          ).toFixed(2)}
+                          % Spălare de bani
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center gap-x-1.5 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">
+                          <svg
+                            className="h-1.5 w-1.5 fill-green-500"
+                            viewBox="0 0 6 6"
+                            aria-hidden="true"
+                          >
+                            <circle
+                              cx={3}
+                              cy={3}
+                              r={3}
+                            />
+                          </svg>
+                          {(
+                            100 -
+                            Number(transaction.Probability) * 100
+                          ).toFixed(2)}
+                          % Legitim
+                        </span>
+                      )}
                     </td>
                     <td className="relative whitespace-nowrap py-2 pl-3 pr-4 text-right text-sm font-medium ">
-                      <a
-                        href="#"
+                      <Link
+                        to={`/transactions/${transaction.id}`}
                         className="text-blue-500 hover:text-blue-900 transition"
                       >
                         info {'->'}
                         <span className="sr-only">, {transaction.id}</span>
-                      </a>
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -221,13 +314,13 @@ export default function Transactions() {
                   disabled={currentPage === 1}
                   className="bg-white relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
                 >
-                  Înapoi
+                  {'<-'} Înapoi
                 </button>
                 <button
                   onClick={() => setCurrentPage((old) => old + 1)}
                   className="bg-white relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
                 >
-                  Înainte
+                  Înainte {'->'}
                 </button>
               </div>
             </nav>

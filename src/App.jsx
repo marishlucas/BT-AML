@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import UploadCsv from './pages/UploadCsv';
 import Transactions from './pages/Transactions';
+import Transaction from './pages/Transaction';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
         <Route
           path="/transactions"
           element={<Transactions />}
+        />
+        <Route
+          path="/transactions/:id"
+          element={<Transaction />}
         />
       </Route>
     </Routes>

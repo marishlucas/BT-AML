@@ -48,9 +48,79 @@ export default function Home() {
     keepPreviousData: true,
   });
 
-  // Check if either query is loading
   if (isLoading || isLoading2) {
-    return <div className="text-xl text-center mt-32">Loading...</div>;
+    return (
+      <div className="text-xl flex flex-row flex-wrap items-center justify-center gap-x-8 text-center mt-32 mx-6">
+        <div
+          role="status"
+          class="max-w-md  p-4 border border-gray-200 rounded-xl shadow animate-pulse md:p-6 "
+        >
+          <div class="h-2.5 bg-gray-200 rounded-full  w-32 mb-2.5"></div>
+          <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full "></div>
+          <div class="flex items-baseline mt-4">
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 "></div>
+            <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+          </div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="max-w-md p-4 border border-gray-200 rounded-xl shadow animate-pulse md:p-6 "
+        >
+          <div class="h-2.5 bg-gray-200 rounded-full  w-32 mb-2.5"></div>
+          <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full "></div>
+          <div class="flex items-baseline mt-4">
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 "></div>
+            <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+          </div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="max-w-md rounded-xl p-4 border border-gray-200  shadow animate-pulse md:p-6 "
+        >
+          <div class="h-2.5 bg-gray-200 rounded-full  w-32 mb-2.5"></div>
+          <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full "></div>
+          <div class="flex items-baseline mt-4">
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 "></div>
+            <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+          </div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="max-w-md p-4 border border-gray-200 rounded-xl shadow animate-pulse md:p-6 "
+        >
+          <div class="h-2.5 bg-gray-200 rounded-full  w-32 mb-2.5"></div>
+          <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full "></div>
+          <div class="flex items-baseline mt-4">
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 "></div>
+            <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 "></div>
+            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 "></div>
+          </div>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   // Check if either query has encountered an error
@@ -95,7 +165,7 @@ export default function Home() {
           <VerificationChart />
         </div>
         <div className="col-span-6 md:col-span-12 order-3">
-          <div className="p-4 bg-white rounded-2xl border shadow-md">
+          <div className="p-4 bg-white rounded-2xl min-w-fit border shadow-md">
             <h2>Ultimele tranzacții</h2>
             <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
               <table className="min-w-full divide-y divide-gray-300">
