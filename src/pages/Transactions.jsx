@@ -102,6 +102,12 @@ export default function Transactions() {
                   </th>
                   <th
                     scope="col"
+                    className="whitespace-nowrap px-2 py-3.5 text-left text-sm font-semibold text-gray-900"
+                  >
+                    Șansă fraudă
+                  </th>
+                  <th
+                    scope="col"
                     className="relative whitespace-nowrap py-3.5 pl-3 pr-4 "
                   >
                     <span className="sr-only">Edit</span>
@@ -111,7 +117,7 @@ export default function Transactions() {
               <tbody className="divide-y divide-gray-200 bg-white">
                 {data.transactions.map((transaction) => (
                   <tr key={transaction.id}>
-                    <td className="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 ">
+                    <td className="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500">
                       {transaction.id}
                     </td>
                     <td className="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">
@@ -131,6 +137,59 @@ export default function Transactions() {
                     </td>
                     <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
                       {transaction.Receiving_Currency}
+                    </td>
+                    <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
+                      {transaction.Probability >= 0 &&
+                        transaction.Probability <= 0.4 && (
+                          <span className="inline-flex items-center gap-x-1.5 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">
+                            <svg
+                              className="h-1.5 w-1.5 fill-green-500"
+                              viewBox="0 0 6 6"
+                              aria-hidden="true"
+                            >
+                              <circle
+                                cx={3}
+                                cy={3}
+                                r={3}
+                              />
+                            </svg>
+                            {transaction.Probability * 100}%
+                          </span>
+                        )}
+                      {transaction.Probability > 0.4 &&
+                        transaction.Probability <= 0.6 && (
+                          <span className="inline-flex items-center gap-x-1.5 rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-800">
+                            <svg
+                              className="h-1.5 w-1.5 fill-yellow-500"
+                              viewBox="0 0 6 6"
+                              aria-hidden="true"
+                            >
+                              <circle
+                                cx={3}
+                                cy={3}
+                                r={3}
+                              />
+                            </svg>
+                            {transaction.Probability * 100}%
+                          </span>
+                        )}
+                      {transaction.Probability > 0.6 &&
+                        transaction.Probability <= 1 && (
+                          <span className="inline-flex items-center gap-x-1.5 rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700">
+                            <svg
+                              className="h-1.5 w-1.5 fill-red-500"
+                              viewBox="0 0 6 6"
+                              aria-hidden="true"
+                            >
+                              <circle
+                                cx={3}
+                                cy={3}
+                                r={3}
+                              />
+                            </svg>
+                            {transaction.Probability * 100}%
+                          </span>
+                        )}
                     </td>
                     <td className="relative whitespace-nowrap py-2 pl-3 pr-4 text-right text-sm font-medium ">
                       <a

@@ -4,6 +4,7 @@ import {
   ArrowsRightLeftIcon,
   Bars3Icon,
   CalendarIcon,
+  ChartBarIcon,
   ChartPieIcon,
   DocumentArrowUpIcon,
   FolderIcon,
@@ -21,14 +22,13 @@ const navigation = [
     icon: DocumentArrowUpIcon,
     current: false,
   },
-  { name: 'Statistics', href: '/', icon: HomeIcon, current: true },
+  { name: 'Statistics', href: '/', icon: ChartBarIcon, current: true },
   {
     name: 'Transactions',
     href: '/transactions',
     icon: ArrowsRightLeftIcon,
     current: false,
   },
-  { name: 'Alerts', href: '#', icon: CalendarIcon, current: false },
 ];
 // const teams = [
 //   { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
