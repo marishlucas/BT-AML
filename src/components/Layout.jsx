@@ -17,14 +17,14 @@ import { Link } from 'react-router-dom';
 
 const navigation = [
   {
-    name: 'Upload CSV',
+    name: 'Încarcă CSV',
     href: '/upload-csv',
     icon: DocumentArrowUpIcon,
     current: false,
   },
-  { name: 'Statistics', href: '/', icon: ChartBarIcon, current: true },
+  { name: 'Statistici', href: '/', icon: ChartBarIcon, current: true },
   {
-    name: 'Transactions',
+    name: 'Tranzacții',
     href: '/transactions',
     icon: ArrowsRightLeftIcon,
     current: false,
@@ -128,8 +128,8 @@ export default function Layout() {
                                   to={item.href}
                                   className={classNames(
                                     item.href == location.pathname
-                                      ? 'bg-gray-50 text-yellow-600'
-                                      : 'text-gray-700 hover:text-yellow-600 hover:bg-gray-50',
+                                      ? 'bg-gray-50 text-yellow-500'
+                                      : 'text-gray-700 hover:text-yellow-500 hover:bg-gray-50',
                                     'transition group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold',
                                   )}
                                 >

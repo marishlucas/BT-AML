@@ -26,7 +26,7 @@ export default function VerificationChart() {
 
   return (
     <div className="text-center flex flex-col items-center h-full justify-center gap-y-2 rounded-2xl bg-white border p-4 shadow-md">
-      <h3 className="font-semibold">Transaction Verification</h3>
+      <h3 className="font-semibold">Verificare Tranzacții</h3>
       <div className="aspect-square px-8 flex items-center justify-center w-full">
         <Doughnut data={chartData} />
       </div>

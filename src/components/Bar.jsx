@@ -37,21 +37,21 @@ export default function FraudBarChart() {
     labels: generateLastTwentyFourHours(),
     datasets: [
       {
-        label: 'Frauds',
+        label: 'Fraude',
         data: Array.from({ length: 24 }, () => Math.floor(Math.random() * 20)), // Random hourly frauds data
         backgroundColor: '#fca5a5',
         barPercentage: 0.9,
         categoryPercentage: 0.6,
       },
       {
-        label: 'Unsures',
+        label: 'Incertitudini',
         data: Array.from({ length: 24 }, () => Math.floor(Math.random() * 15)), // Random hourly unsures data
         backgroundColor: '#fde68a',
         barPercentage: 0.9,
         categoryPercentage: 0.6,
       },
       {
-        label: 'Non-Frauds',
+        label: 'Legitime',
         data: Array.from({ length: 24 }, () => Math.floor(Math.random() * 50)), // Random hourly non-frauds data
         backgroundColor: '#bfdbfe',
         barPercentage: 0.9,

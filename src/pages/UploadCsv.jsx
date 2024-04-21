@@ -43,10 +43,10 @@ export default function UploadCsv() {
     <div className="absolute h-full w-full grid place-items-center">
       <div className="bg-white rounded-xl p-8 border shadow-lg flex flex-col max-w-2xl w-full">
         <div className="flex justify-between">
-          <h2 className="text-xl text-yellow-600 font-bold mb-4">
-            Upload a CSV File
+          <h2 className="text-xl text-gray-900 font-bold mb-4">
+            Încarcă un fișier CSV
           </h2>
-          <span className="text-gray-500">max 128MB</span>
+          <span className="text-gray-500">max : 1GB </span>
         </div>
         <input
           ref={fileInputRef}
@@ -60,11 +60,13 @@ export default function UploadCsv() {
           onClick={handleButtonClick}
           className="relative block w-full rounded-lg border-2 border-dashed border-gray-300 p-12 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
-          <DocumentArrowUpIcon className="mx-auto h-12 w-12 text-gray-400" />
-          Select a file or drag it here
+          <DocumentArrowUpIcon className="mx-auto h-12 w-12 text-yellow-400" />
+          <span className="mt-4 text-sm text-gray-500">
+            Selectează un fișier
+          </span>
         </button>
         {isLoading && (
-          <p className="text-blue-500 text-center mt-2">Uploading...</p>
+          <p className="text-blue-500 text-center mt-4">Se încarcă...</p>
         )}
         {uploadFileMutation.isError && (
           <p className="text-red-500 text-center mt-2">
