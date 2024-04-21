@@ -3,13 +3,8 @@ import { Dialog, Transition } from '@headlessui/react';
 import {
   ArrowsRightLeftIcon,
   Bars3Icon,
-  CalendarIcon,
   ChartBarIcon,
-  ChartPieIcon,
   DocumentArrowUpIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { Outlet, useLocation } from 'react-router';
@@ -30,11 +25,6 @@ const navigation = [
     current: false,
   },
 ];
-// const teams = [
-//   { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-//   { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-//   { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
-// ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -307,13 +297,13 @@ export default function Layout() {
             />
           </button>
           <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">
-            Dashboard
+            Panou control
           </div>
           <a href="#">
             <span className="sr-only">Your profile</span>
             <img
-              className="h-8 w-8 rounded-full bg-gray-50"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              className="h-8 w-8 object-cover rounded-full bg-gray-50"
+              src="/profile.jpg"
               alt=""
             />
           </a>
