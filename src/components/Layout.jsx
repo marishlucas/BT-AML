@@ -15,16 +15,16 @@ import { Outlet, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Home', href: '/', icon: HomeIcon, current: true },
   {
     name: 'Upload CSV',
     href: '/upload-csv',
     icon: DocumentArrowUpIcon,
     current: false,
   },
+  { name: 'Statistics', href: '/', icon: HomeIcon, current: true },
   {
     name: 'Transactions',
-    href: 'zuzu',
+    href: '/transactions',
     icon: ArrowsRightLeftIcon,
     current: false,
   },
@@ -202,7 +202,7 @@ export default function Layout() {
                 src="/favicon.svg"
                 alt="Your Company"
               />
-              <span className="font-bold">Banka Transylvania</span>
+              <span className="font-bold">Panou AML-System</span>
             </div>
             <nav className="flex flex-1 flex-col">
               <ul
@@ -281,12 +281,12 @@ export default function Layout() {
                     className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
                   >
                     <img
-                      className="h-8 w-8 rounded-full bg-gray-50"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      className="h-8 w-8 rounded-full object-cover bg-gray-50"
+                      src="/profile.jpg"
                       alt=""
                     />
                     <span className="sr-only">Your profile</span>
-                    <span aria-hidden="true">Tom Cook</span>
+                    <span aria-hidden="true">Alexandra Ionescu</span>
                   </a>
                 </li>
               </ul>

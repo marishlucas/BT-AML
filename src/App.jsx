@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import UploadCsv from './pages/UploadCsv';
+import Transactions from './pages/Transactions';
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
         <Route
           path="/upload-csv"
           element={<UploadCsv />}
+        />
+        <Route
+          path="/transactions"
+          element={<Transactions />}
         />
       </Route>
     </Routes>
